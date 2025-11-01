@@ -1,0 +1,174 @@
+/* Modern Dark Theme */
+:root {
+    --primary-bg: #0a1929;
+    --secondary-bg: #132f4c;
+    --card-bg: #132f4c;
+    --accent-color: #29b6f6;
+    --text-primary: #ffffff;
+    --text-secondary: #b2bac2;
+    --border-color: rgba(194, 224, 255, 0.08);
+    --chart-grid: rgba(194, 224, 255, 0.12);
+    --success-color: #4caf50;
+    --warning-color: #ff9800;
+    --danger-color: #f44336;
+}
+
+body {
+    background-color: var(--primary-bg);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: var(--secondary-bg) !important;
+    border-bottom: 1px solid var(--border-color);
+    padding: 1rem 0;
+}
+
+.navbar-brand {
+    color: var(--accent-color) !important;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: var(--text-primary) !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+/* Card Styling */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: rgba(194, 224, 255, 0.02);
+    border-bottom: 1px solid var(--border-color);
+    padding: 1.25rem;
+}
+
+.card-header h5 {
+    color: var(--text-primary);
+    margin: 0;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Status Colors */
+.status-normal {
+    color: var(--success-color);
+}
+
+.status-warning {
+    color: var(--warning-color);
+}
+
+.status-danger {
+    color: var(--danger-color);
+}
+
+/* Charts and Graphs */
+canvas {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#waterLevelGauge {
+    max-height: 250px;
+}
+
+/* Table Styling */
+.table {
+    color: var(--text-primary);
+}
+
+.table th {
+    background-color: rgba(194, 224, 255, 0.02);
+    color: var(--text-secondary);
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+}
+
+.table td {
+    border-color: var(--border-color);
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(194, 224, 255, 0.02);
+}
+
+/* Login Form Styling */
+.form-control {
+    background-color: rgba(194, 224, 255, 0.02);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    background-color: rgba(194, 224, 255, 0.05);
+    border-color: var(--accent-color);
+    color: var(--text-primary);
+    box-shadow: 0 0 0 2px rgba(41, 182, 246, 0.2);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0288d1;
+    transform: translateY(-1px);
+}
+
+/* Animations */
+@keyframes statusUpdate {
+    0% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+#currentStatus {
+    animation: statusUpdate 0.5s ease-in-out;
+}
+
+.badge {
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 1rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.9em;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+}
